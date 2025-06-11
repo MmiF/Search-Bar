@@ -1,3 +1,9 @@
+/********************************
+
+============= Global ===========
+
+********************************/
+
 * {
   padding: 0;
   margin: 0;
@@ -6,6 +12,11 @@
 body {
   background-color: antiquewhite;
   font-family: sans-serif;
+  min-width: 100vw;
+  overflow: hidden;
+}
+h1 {
+  text-align: center;
 }
 ul {
   list-style-type: none;
@@ -14,6 +25,13 @@ a {
   text-decoration: none;
   display: inline-block;
 }
+
+/********************************
+
+============ Container ==========
+
+********************************/
+
 .container {
   max-width: 1111px;
   text-transform: capitalize;
@@ -23,12 +41,6 @@ a {
   margin: 2rem auto;
   background-color: #eee;
 }
-
-.container ul {
-  display: flex;
-}
-
-
 .container a {
   color: black;
   padding: 1.3rem 2rem;
@@ -39,23 +51,55 @@ a {
   color: white;
 }
 
-.container div {
-  margin-left: auto;
-  padding-right: 0.5rem;
+/********************************
+
+========= list-container ========
+
+********************************/
+
+.list-container {
+  display: flex;
 }
-.container input {
+.list-container .active {
+  background-color: aqua;
+}
+/********************************
+
+======= search-container =======
+
+********************************/
+
+.search-container {
+  margin-left: auto;
+  padding: 0 1.5rem;
+}
+.search-container input {
   outline: none;
   border: none;
   padding: 0.7rem;
   border-radius: 6px;
 }
-.container button {
+
+/********************************
+
+=========== search-btn =========
+
+********************************/
+
+.search-btn {
   outline: none;
   border: none;
   padding: 0.5rem;
   cursor: pointer;
   background-color: black;
   border-radius: 5px;
+  transition: background-color 0.2s;
+}
+.search-btn:hover {
+  background-color: #4b4b4b;
+}
+.search-btn:active {
+  background-color: #aaa;
 }
 .bi-search {
   color: #fff;
@@ -66,37 +110,46 @@ a {
     max-width: 1111px;
     text-transform: capitalize;
     font-weight: bold;
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
   }
-  .container ul {
-    flex-direction: column;
-    width: 100%;
-  }
-  .container a {
+  .list-container a {
     color: black;
     width: 100%;
     transition: all 0.3s;
   }
-  .container a:hover {
+  .list-container a:hover {
     background-color: black;
     color: white;
   }
-  .container input {
-    margin: 0.5rem;
+  .list-container {
+    flex-direction: column;
+    width: 100%;
+  }
+  .search-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+  }
+  .search-container input {
+    margin: 0.5rem 0rem;
     outline: none;
     border: none;
-    width: 90vw;
+    min-width: 60vw;
+    min-width: 90vw;
+    height: 2.5rem;
+    font-size: 15px;
     padding: 0.7rem;
     border-radius: 6px;
   }
-  .container input:focus {
+  .search-container input:focus {
     border: 1px solid gray;
   }
-  .container button {
+  .search-btn {
     outline: none;
     border: none;
+    height: 2.5rem;
     padding: 0.5rem;
     cursor: pointer;
     background-color: black;
