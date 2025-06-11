@@ -1,0 +1,105 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: antiquewhite;
+  font-family: sans-serif;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+.container {
+  max-width: 1111px;
+  text-transform: capitalize;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin: 2rem auto;
+  background-color: #eee;
+}
+
+.container ul {
+  display: flex;
+}
+
+
+.container a {
+  color: black;
+  padding: 1.3rem 2rem;
+  transition: all 0.3s;
+}
+.container a:hover {
+  background-color: black;
+  color: white;
+}
+
+.container div {
+  margin-left: auto;
+  padding-right: 0.5rem;
+}
+.container input {
+  outline: none;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 6px;
+}
+.container button {
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  background-color: black;
+  border-radius: 5px;
+}
+.bi-search {
+  color: #fff;
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    max-width: 1111px;
+    text-transform: capitalize;
+    font-weight: bold;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+  }
+  .container ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  .container a {
+    color: black;
+    width: 100%;
+    transition: all 0.3s;
+  }
+  .container a:hover {
+    background-color: black;
+    color: white;
+  }
+  .container input {
+    margin: 0.5rem;
+    outline: none;
+    border: none;
+    width: 90vw;
+    padding: 0.7rem;
+    border-radius: 6px;
+  }
+  .container input:focus {
+    border: 1px solid gray;
+  }
+  .container button {
+    outline: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    background-color: black;
+    border-radius: 5px;
+  }
+}
